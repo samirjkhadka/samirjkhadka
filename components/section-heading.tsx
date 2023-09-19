@@ -1,8 +1,12 @@
-import React from "react";
+import React, { ReactNode } from "react";
 
 type SectionHeadingProps = {
-  children: React.ReactNode;
+  children: ReactNode;
 };
-export default function SectionHeading({ children }) {
+interface Props {
+  children?: ReactNode;
+}
+
+export default function SectionHeading({ children, ...props }: Props) {
   return <h2 className="text-3xl font-medium capitalize mb-8">{children}</h2>;
 }
