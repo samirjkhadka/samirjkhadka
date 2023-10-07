@@ -23,7 +23,7 @@ function Intro() {
     delaySpeed: 5000,
   });
   return (
-    <section>
+    <section id="home" className="scroll-mt-28">
       <div className="flex items-center justify-center">
         <div className="relative">
           <motion.div
