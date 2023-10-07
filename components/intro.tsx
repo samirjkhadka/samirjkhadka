@@ -60,8 +60,7 @@ function Intro() {
             <span className="">|</span>{" "}
             <span className="text-4xl text-red-400">M</span>obile App
             Development <span className="">|</span> <br />
-            &nbsp; <span className="text-4xl text-red-400">S</span>haping
-            Innovation in Fintech 🚀
+            &nbsp; <span className="text-4xl text-red-400">F</span>intech 🚀
           </h2>
 
           <h1 className="text-5xl lg:text-6xl font-semibold px-10 py-10">
