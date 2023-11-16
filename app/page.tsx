@@ -3,6 +3,7 @@ import Header from "@/components/header";
 import Intro from "@/components/intro";
 import Projects from "@/components/projects";
 import SectionDivider from "@/components/section-divider";
+import Skills from "@/components/skills";
 import Head from "next/head";
 import Image from "next/image";
 
@@ -14,6 +15,7 @@ export default function Home() {
       <SectionDivider />
       <About/>
       <Projects/>
+      <Skills/>
       <footer className="sticky w-full cursor-pointer bottom-5">
         <div>
           <Image

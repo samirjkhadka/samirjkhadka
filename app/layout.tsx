@@ -2,6 +2,7 @@ import Header from "@/components/header";
 import "./globals.css";
 import { Inter, Mulish, Urbanist } from "next/font/google";
 import Intro from "@/components/intro";
+import ActiveSectionContextProvider from "@/context/active-section-context";
 
 const fontUsed = Urbanist({ subsets: ["latin"] });
 
@@ -52,8 +53,11 @@ export default function RootLayout({
           2xl:left-[-5rem]
         "
         ></div>
+        <ActiveSectionContextProvider>
         <Header />
         {children}
+        </ActiveSectionContextProvider>
+       
         
       </body>
     </html>

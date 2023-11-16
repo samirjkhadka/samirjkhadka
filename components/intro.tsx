@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
@@ -15,15 +15,26 @@ import {
   BsGithub,
 } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
+import { useInView } from "react-intersection-observer";
+import { useActiveSectionContext } from "@/context/active-section-context";
 
 function Intro() {
+
+  const { ref, inView } = useInView({ threshold: 0.5 });
+  const { setActiveSection } = useActiveSectionContext();
+
+  useEffect(() => {
+    if (inView) {
+      setActiveSection("Home");
+    }
+  }, [inView, setActiveSection]);
   const [text, count] = useTypewriter({
     words: ["Hi My name is Samir", "<I am Coffee and Code />"],
     loop: true,
     delaySpeed: 5000,
   });
   return (
-    <section id="home" className="scroll-mt-28">
+    <section ref = {ref} id="home" className="scroll-mt-28">
       <div className="flex items-center justify-center">
         <div className="relative">
           <motion.div

@@ -1,12 +1,23 @@
 "use client";
 import { motion } from "framer-motion";
-import React, { ReactElement } from "react";
+import React, { ReactElement, useEffect } from "react";
 import mypic from "../images/A4-1.png";
 import SectionHeading from "./section-heading";
+import { useInView } from "react-intersection-observer";
+import { useActiveSectionContext } from "@/context/active-section-context";
 
 interface Props {}
 
 export default function About({}: Props) {
+  const { ref, inView } = useInView();
+  const {setActiveSection} = useActiveSectionContext();
+
+  useEffect ( () => {
+    if (inView){
+      setActiveSection("About")
+    }
+  }, [inView, setActiveSection])
+  
   return (
     // <motion.div className="flex
     // flex-col
@@ -59,6 +70,7 @@ export default function About({}: Props) {
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
       id="about"
+      ref={ref}
     >
       <SectionHeading> About Me</SectionHeading>
 
