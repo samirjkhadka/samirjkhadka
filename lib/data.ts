@@ -65,15 +65,24 @@ export const projectsData = [
     title: "YO App",
     description:
       "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Dapper",'SQL','Redis','Elastic Search'],
+    tags: [
+      "React",
+      "Next.js",
+      "MongoDB",
+      "Tailwind",
+      "Dapper",
+      "SQL",
+      "Redis",
+      "Elastic Search",
+    ],
     imageUrl: corpcommentImg,
   },
-  
+
   {
     title: "KISAN",
     description:
       "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer","ASP.NET", "REDIS"],
+    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer", "ASP.NET", "REDIS"],
     imageUrl: wordanalyticsImg,
   },
   {
@@ -83,7 +92,6 @@ export const projectsData = [
     tags: ["React", "Next.js", "SQL", "Tailwind", "Framer", "ASP.NET", "REDIS"],
     imageUrl: wordanalyticsImg,
   },
-  
 ] as const;
 
 export const skillsData = [
@@ -92,7 +100,7 @@ export const skillsData = [
   "JavaScript",
   "TypeScript",
   "Asp.Net",
-  'Sql Server',
+  "Sql Server",
   "React",
   "Next.js",
   "Node.js",
@@ -102,9 +110,10 @@ export const skillsData = [
   "MongoDB",
   "Redux",
   "GraphQL",
-
+  "Flutter",
   "Express",
   "PostgreSQL",
- 
+  "Figma",
+  "Adobe Photoshop",
   "Framer Motion",
 ] as const;
