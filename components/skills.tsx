@@ -27,7 +27,7 @@ export default function Skills() {
   
     useEffect(() => {
       if (inView) {
-        setActiveSection("Projects");
+        setActiveSection("Skills");
       }
     }, [inView, setActiveSection]);
 

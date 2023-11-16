@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, {useEffect} from "react";
 import SectionHeading from "./section-heading";
 import {
   VerticalTimeline,
@@ -7,10 +7,24 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { experiencesData } from "@/lib/data";
+import { useInView } from "react-intersection-observer";
+import { useActiveSectionContext } from "@/context/active-section-context";
 
 export default function Experience() {
+  const { ref, inView } = useInView({ threshold: 0.5 });
+  const { setActiveSection } = useActiveSectionContext();
+
+  useEffect(() => {
+    if (inView) {
+      setActiveSection("Experience");
+    }
+  }, [inView, setActiveSection]);
+  
   return (
-    <section id="experience" className="scroll-mt-28 mb-28 sm:mb-40">
+
+
+
+    <section ref={ref} id="experience" className="scroll-mt-28 mb-28 sm:mb-40">
       <SectionHeading>Experience</SectionHeading>
       <VerticalTimeline>
         {experiencesData.map((item, index) => (

@@ -1,5 +1,7 @@
 import About from "@/components/about";
+import Contact from "@/components/contact";
 import Experience from "@/components/experience";
+import Footer from "@/components/footer";
 import Header from "@/components/header";
 import Intro from "@/components/intro";
 import Projects from "@/components/projects";
@@ -18,7 +20,9 @@ export default function Home() {
       <Projects/>
       <Skills/>
       <Experience/>
-      <footer className="sticky w-full cursor-pointer bottom-5">
+      <Contact/>
+      
+      <footer className="sticky w-full cursor-pointer bottom-5 text-center">
         <div>
           <Image
             src="/images/samirkhadka.png"
@@ -29,6 +33,7 @@ export default function Home() {
             priority={true}
             className="h-10 w-10 rounded-full cursor-pointer grayscale hover:grayscale-0"
           ></Image>
+          <small className="text-xs"> &copy; 2023 Samir J Khadka. All rights reserved</small>
         </div>
       </footer>
     </main>
