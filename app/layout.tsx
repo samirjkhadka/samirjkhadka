@@ -22,7 +22,7 @@ export default function RootLayout({
         <link rel="icon" href="favicon.ico"></link>
       </head>
       <body
-        className={`${fontUsed.className} bg-gray-50 text-gray-950 relative h-[5000px] pt-28 sm:pt-36`}
+        className={`${fontUsed.className} bg-gray-50 text-gray-950 relative pt-28 sm:pt-36`}
       >
         <div
           className="bg-[#fbe2e3] 
